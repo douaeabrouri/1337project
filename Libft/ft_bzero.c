@@ -27,4 +27,4 @@ void ft_bzero(void *str, size_t size)
 //         write(1, &str[i], 1);
 //         i++;
 //     }
-}
+// }

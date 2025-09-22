@@ -29,5 +29,5 @@ int ft_atoi(const char *string)
 
 int main(void)
 {
-    printf("%d\n", ft_atoi("-1"));
+    printf("%d\n", ft_atoi("---------+++++12345avgdj"));
 }
