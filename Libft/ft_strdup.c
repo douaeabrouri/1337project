@@ -22,7 +22,7 @@ char *ft_strdup(char *string)
         return (NULL);
     }
     index = 0;
-    while(string[index])
+    while(len )
     {
         tmp[index] = string[index];
         index++;
