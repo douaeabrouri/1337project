@@ -41,11 +41,23 @@ char *ft_itoa(int n)
     if(tmp == NULL)
         return (NULL);
     if(n == 0)
-        return ("0");
+    {
+        tmp[0] = '0';
+        tmp[1] = '\0';
+        return (tmp);
+    }
     if(n == -2147483648)
-        return ("-2147483648");
-    if(n == 2147483648)
-        return ("2147483648");
+    {
+        char *max = "-2147483648";
+        int index = 0;
+        while(max[index])
+        {
+            tmp[index] = max[index];
+            index++;
+        }
+        tmp[index]= '\0';
+        return (tmp);
+    }
     if(n < 0)
     {
         neg = 1;
@@ -57,14 +69,17 @@ char *ft_itoa(int n)
         n /= 10;
         i++;
     }
-    if(neg == 1)
+    if(neg == 1){
         tmp[i] = '-';
+        i++;
+    }
+    tmp[i] = '\0';
     return (reverse(tmp));
 }
 
 int main(void)
 {
-    int i = 253688;
+    int i = 0;
     
     printf("%s\n", ft_itoa(i));
 }
