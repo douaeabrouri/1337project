@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+// void f(unsigned int n, char *str)
+// {
+//     (void)n;
+//     if(*str >= 'a' && *str <= 'z')
+//         *str = *str - 'a' + 'A';
+// }
 
 void    ft_striteri(char *s, void (*f)(unsigned int n, char *str))
 {
@@ -17,3 +22,10 @@ void    ft_striteri(char *s, void (*f)(unsigned int n, char *str))
         }
     }
 }
+
+// int main(void)
+// {
+//     char str[10] = "hi bae";
+//     ft_striteri(str, (f));
+//     printf("%s\n", str);
+// }
